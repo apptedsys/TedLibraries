@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TedTextView">
+        <attr name="font_name">
+            <enum value="1" name="lato_regular"/>
+            <enum value="2" name="lato_italic"/>
+            <enum value="3" name="lato_bold"/>
+            <enum value="4" name="sans_regular"/>
+            <enum value="5" name="sans_italic"/>
+            <enum value="6" name="sans_bold"/>
+        </attr>
+    </declare-styleable>
+</resources>

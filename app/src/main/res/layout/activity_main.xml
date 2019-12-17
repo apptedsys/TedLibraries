@@ -1,19 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
+    <in.tedsys.tedutils.TedButton
         android:id="@+id/btn_test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Test"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp"
+        app:font_name="lato_regular"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Lato Bold"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="lato_bold" />
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Lato Regular"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="lato_regular" />
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Lato Italic"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="lato_italic" />
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Sans Bold"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="sans_bold" />
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Sans Regular"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="sans_regular" />
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Sans Italic"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="sans_italic" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
