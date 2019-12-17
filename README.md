@@ -36,7 +36,7 @@ Step 4. Now we can add API function in another function
                 //Response Listener to get return values from API
                 .listener(this)
                 //Add a number to identify the request 
-                //declared as 'public static final REQUEST_CODE = 101';
+                //declared as 'public static final int REQUEST_CODE = 101';
                 .requestCode(REQUEST_CODE)
                 //and finally send this request t server
                 .send();
