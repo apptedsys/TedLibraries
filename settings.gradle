@@ -1,0 +1,2 @@
+include ':app', ':tedutils'
+rootProject.name='Ted Libraries'
