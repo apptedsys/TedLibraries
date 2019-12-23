@@ -13,7 +13,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.apptedsys:TedLibraries:1.0'
+	        implementation 'com.github.apptedsys:TedLibraries:1.1'
 	}
   
 Step 3. Implement Response Listener
@@ -67,6 +67,67 @@ Not this Library supports API communication through JSON only and the response s
         ]
 	}
   
-  This is just an initial approch to simplifying java codes in android apps.
-  Thank you all :)
-  
+# Awesome !
+cool new costomised controls added to Ted libs to inflate a font to your views
+
+
+
+
+    <in.tedsys.tedutils.TedCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Lato Bold"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="lato_bold" />
+
+    <in.tedsys.tedutils.TedAutoComplete
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Lato Regular"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="lato_regular" />
+
+    <in.tedsys.tedutils.TedEditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Lato Italic"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="lato_italic" />
+
+    <in.tedsys.tedutils.TedRadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Sans Bold"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="sans_bold" />
+    <in.tedsys.tedutils.TedButton
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textSize="20sp"
+        app:font_name="lato_regular"/>
+
+    <in.tedsys.tedutils.TedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Sans Regular"
+        android:textColor="#222222"
+        android:textSize="25sp"
+        app:font_name="sans_regular" />
+
+
+Customize Controls with 
+	
+	app:font_name="sans_regular"
+
+Thats it
