@@ -76,6 +76,6 @@
         android:layout_height="wrap_content"
         app:font_name="lato_regular"
         android:textSize="25sp"
-        android:format12Hour="HH : mm : ss A"/>
+        android:format12Hour="HH : mm : ss a"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

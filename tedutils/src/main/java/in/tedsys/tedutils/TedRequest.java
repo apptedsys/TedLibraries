@@ -1,6 +1,7 @@
 package in.tedsys.tedutils;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -59,6 +60,10 @@ public class TedRequest {
 
     public static void send() {
         if (validate()) {
+            if (path != null)
+                Log.e("Server Path", path);
+            if (params != null)
+                Log.e("Params", params.toString());
             if (Connectivity.isConnected(context)) {
                 JsonObjectRequest getCNameRequest = new JsonObjectRequest
                         (Request.Method.POST, path, params, new Response.Listener<JSONObject>() {
