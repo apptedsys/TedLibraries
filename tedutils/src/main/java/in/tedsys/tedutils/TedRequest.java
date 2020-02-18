@@ -44,7 +44,8 @@ public class TedRequest {
     }
 
     public static TedRequest params(JSONObject Inputs) {
-        sSoleInstance.params = getParams(Inputs);
+        sSoleInstance.params = Inputs;
+//        sSoleInstance.params = getParams(Inputs);
         return sSoleInstance;
     }
 
