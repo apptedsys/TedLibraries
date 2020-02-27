@@ -26,6 +26,7 @@ public class TedRequest {
     private static JSONObject params = null;
     private static ResponseListener listener;
     private static int request_code;
+    private static String returnType = null;
 
     private TedRequest() {
     }  //private constructor.
@@ -59,6 +60,11 @@ public class TedRequest {
         return sSoleInstance;
     }
 
+    public static TedRequest returnType(String returnType) {
+        sSoleInstance.returnType = returnType;
+        return sSoleInstance;
+    }
+
     public static void send() {
         if (validate()) {
             if (path != null)
@@ -79,8 +85,13 @@ public class TedRequest {
                                             listener.onResponseError(request_code, NO_DATA_FOUND, "Error getting data !");
                                             break;
                                         case 200:
-                                            JSONArray tempArray = response.getJSONArray("Result");
-                                            listener.onResponseSuccess(request_code, tempArray);
+                                            if (returnType == null) {
+                                                JSONArray tempArray = response.getJSONArray("Result");
+                                                listener.onResponseSuccess(request_code, tempArray);
+                                            } else {
+                                                JSONArray tempArray = response.getJSONArray(returnType);
+                                                listener.onResponseSuccess(request_code, tempArray);
+                                            }
                                             break;
                                     }
                                 } catch (JSONException e) {
