@@ -44,8 +44,12 @@ public class TedRequest {
         return sSoleInstance;
     }
 
-    public static TedRequest params(JSONObject Inputs) {
-        sSoleInstance.params = Inputs;
+    public static TedRequest params(String Inputs) {
+        try {
+            sSoleInstance.params = new JSONObject(Inputs);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 //        sSoleInstance.params = getParams(Inputs);
         return sSoleInstance;
     }
@@ -67,16 +71,19 @@ public class TedRequest {
 
     public static void send() {
         if (validate()) {
+
             if (path != null)
                 Log.e("Server Path", path);
+
             if (params != null)
                 Log.e("Params", params.toString());
+
             if (Connectivity.isConnected(context)) {
                 JsonObjectRequest getCNameRequest = new JsonObjectRequest
                         (Request.Method.POST, path, params, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                int RESP_CODE = 0;
+//                                int RESP_CODE = 0;
                                 //                                    RESP_CODE = response.getInt("Code");
 //
 //                                    switch (RESP_CODE) {
