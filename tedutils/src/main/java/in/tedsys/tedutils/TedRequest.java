@@ -77,27 +77,22 @@ public class TedRequest {
                             @Override
                             public void onResponse(JSONObject response) {
                                 int RESP_CODE = 0;
-                                try {
-//                                    RESP_CODE = response.getInt("Code");
+                                //                                    RESP_CODE = response.getInt("Code");
 //
 //                                    switch (RESP_CODE) {
 //                                        case 500:
 //                                            listener.onResponseError(request_code, NO_DATA_FOUND, "Error getting data !");
 //                                            break;
 //                                        case 200:
-                                    if (returnType == null) {
-                                        JSONArray tempArray = response.getJSONArray("Result");
-                                        listener.onResponseSuccess(request_code, tempArray);
-                                    } else {
-                                        JSONArray tempArray = response.getJSONArray(returnType);
-                                        listener.onResponseSuccess(request_code, tempArray);
-                                    }
+//                                            if (returnType == null) {
+//                                                JSONArray tempArray = response.getJSONArray("Result");
+                                listener.onResponseSuccess(request_code, response);
+//                                            } else {
+//                                                JSONArray tempArray = response.getJSONArray(returnType);
+//                                                listener.onResponseSuccess(request_code, tempArray);
+//                                            }
 //                                            break;
 //                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                    listener.onResponseError(request_code, JSON_PARSE_ERROR, e.toString());
-                                }
                             }
 
                         }, new Response.ErrorListener() {
